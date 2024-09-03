@@ -11,7 +11,7 @@ def send_email(message, recipient, *, sender = default_sender):
     elif sender == default_sender:
         print(f'Письмо успешно отправлено с адреса {sender} на адрес {recipient}.')
     else:
-        print(f'НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса <sender> на адрес <recipient>.')
+        print(f'НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса {sender} на адрес {recipient}.')
 
 
 send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
