@@ -1,5 +1,5 @@
-numeric_types = [int, float, complex]
-collections = [set, list, tuple, range]
+numeric_types = int, float, complex
+collections = set, list, tuple, range
 
 def calculate_structure_sum(*data):
     res = 0
