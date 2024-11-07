@@ -19,7 +19,7 @@ class Knight(th.Thread):
             ndays += 1
             enemies -= self.power
             print(
-                f"{self.name} сражается {ndays} дней, осталось {max(enemies, 0)} врагов"
+                f"{self.name} сражается {ndays} дней, осталось {max(enemies, 0)} воинов."
             )
         print(f"{self.name} одержал победу спустя {ndays} дней(дня)!")
 
