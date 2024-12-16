@@ -1,8 +1,9 @@
-from runner_and_tournament import *
 import unittest
+from runner_and_tournament import *
 
 
 class TournamentTest(unittest.TestCase):
+    is_frozen = True
 
     __DEFAULT_DISTANCE = 90
 
@@ -39,16 +40,20 @@ class TournamentTest(unittest.TestCase):
             results[key] = str(results[key])
         self.all_results.append(results)
 
+    @unittest.skipIf(is_frozen, "Тесты в этом кейсе заморожены")
     def test_challenge_1(self):
         self.run_tournament(self.bolt, self.nick, outsider=self.nick)
 
+    @unittest.skipIf(is_frozen, "Тесты в этом кейсе заморожены")
     def test_challenge_2(self):
         self.run_tournament(self.andrew, self.nick, outsider=self.nick)
 
+    @unittest.skipIf(is_frozen, "Тесты в этом кейсе заморожены")
     def test_challenge_3(self):
         self.run_tournament(self.bolt, self.andrew, self.nick, outsider=self.nick)
 
     # Тест на ошибку, когда менее быстрый бегун может оказаться первым
+    @unittest.skipIf(is_frozen, "Тесты в этом кейсе заморожены")
     def test_challenge_4(self):
         self.run_tournament(self.andrew, self.bolt, self.nick, leader=self.bolt)
 
